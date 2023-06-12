@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>if, unless</h1>
+	<table border="1">
+		<tr>
+			<th>count</th>
+			<th>userName</th>
+			<th>age</th>
+		</tr>
+		<tr th:each="user : ${users}">
+			<td th:text="${userStat.count}"></td>
+			<td th:text="${user.username}"></td>
+			<td><span th:text="${user.age}"></span> <span
+				th:if="${user.age lt 30}" th:text="'30 미만'"></span> <span
+				th:unless="${user.age lt 30}" th:text="'30 이상'"></span></td>
+		</tr>
+	</table>
+</body>
+</html>

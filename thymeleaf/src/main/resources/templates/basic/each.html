@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>반복</h1>
+	<h3>기본 테이블</h3>
+	<table border="1">
+		<tr>
+			<th>userName</th>
+			<th>age</th>
+		</tr>
+		<tr th:each="user : ${users}">
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.age}"></td>
+		</tr>
+	</table>
+	<h3>부가 정보 테이블</h3>
+	<table border="1">
+		<tr>
+			<th>count</th>
+			<th>userName</th>
+			<th>age</th>
+		</tr>
+		<tr th:each="user, userStat : ${users}">
+			<td th:text="${userStat.count}"></td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.age}"></td>
+
+			<!-- 
+				index : 0 부터 시작하는 값
+				count : 1 부터 시작하는 값
+				size : 전체 갯수의 값
+				even, odd : 홀수, 짝수 여부 (boolean 타입)
+				first, last : 처음 마지막 여부 (boolean 타입)
+				current : 현재 객체
+			
+			 -->
+			<td>index = <span th:text="${userStat.index}"></span></td>
+			<td>count = <span th:text="${userStat.count}"></span></td>
+			<td>size = <span th:text="${userStat.size}"></span></td>
+			<td>even = <span th:text="${userStat.even}"></span></td>
+			<td>odd = <span th:text="${userStat.odd}"></span></td>
+			<td>last = <span th:text="${userStat.last}"></span></td>
+			<td>current = <span th:text="${userStat.current}"></span></td>
+		</tr>
+	</table>
+</body>
+</html>

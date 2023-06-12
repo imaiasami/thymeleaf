@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> 리터럴 </h1>
+<ul>
+	<!-- 
+		문자 : 'Hello'
+		숫자 : 10
+		boolean : true, false
+		null : null
+	 -->
+	<!-- 리터럴은 기본적으로 ''로 감싸야 한다. 단, 공백이 없으면 생략이 가능하다.  -->
+	<li> 'Hello World' = <span th:text="'Hello World'"></span></li>
+	<li> 'Hello" + ' World' = <span th:text="'Hello' + ' World'"></span></li>
+	<li> 'Hello' + ${data} = <span th:text="'Hello' + ' ' + ${data}"></span></li>
+	<li> 리터럴 대체 |Hello ${data}| = <span th:text="|Hello ${data}|"></span></li>
+</ul>
+</body>
+</html>

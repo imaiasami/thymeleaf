@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> URL 링크 </h1>
+<ul>
+	<li><a th:href="@{/hello}"> basic URL </a></li>
+	<li><a th:href="@{/hello(param1=${param1}, param2 =${param2})}"> query param </a></li>
+	<li><a th:href="@{/hello/{path1}/{path2}(path1=${param1}, path2=${param2})}"> path variable</a></li>
+	<!-- 패스 파라미터가 끝나고 추가로 붙는 파라미터는 쿼리 파라미터가 된다. -->
+	<li><a th:href="@{/hello/{path1}(path1=${param1}, param2=${param2})}"> path variable + query param </a></li>
+</ul>
+</body>
+</html>

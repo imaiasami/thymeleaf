@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>블록</h1>
+	<th:block th:each="user : ${users}">
+		<div>
+			사용자 이름 : <span th:text="${user.username}"></span>
+			사용자 나이 : <span th:text="${user.age}"></span>
+		</div>
+	</th:block>
+</body>
+</html>

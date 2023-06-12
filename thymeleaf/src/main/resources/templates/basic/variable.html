@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>String EL</h1>
+	<h3>Object</h3>
+	<ul>
+		<li>${userA.userName} = <span th:text="${user1.userName}"></span></li>
+		<li>${userA['userName']} = <span th:text="${user1.userName}"></span></li>
+		<li>${userA.getUseName()} = <span th:text="${user1.userName}"></span></li>
+	</ul>
+	<ul>
+		<li>${userB.userName} = <span th:text="${user2.userName}"></span></li>
+		<li>${userB['userName']} = <span th:text="${user2.userName}"></span></li>
+		<li>${userB.getUserName()} = <span th:text="${user2.userName}"></span></li>
+	</ul>
+	<h3>List</h3>
+	<ul>
+		<li>${users[0].userName} = <span th:text="${users[0].userName}"></span></li>
+		<li>${users[0]['userName']} = <span
+			th:text="${users[0].userName}"></span></li>
+		<li>${users[0].getUserName} = <span
+			th:text="${users[0].userName}"></span></li>
+	</ul>
+	<h3>Map</h3>
+	<ul>
+		<li>${userMap['userB'].userName} = <span
+			th:text="${userMap['userB'].userName}"></span></li>
+		<li>${userMap['userB']['userName']} = <span
+			th:text="${userMap['userB'].userName}"></span></li>
+		<li>${userMap['userB'].getUserName} = <span
+			th:text="${userMap['userB'].userName}"></span></li>
+	</ul>
+
+	<h1>지역변수 - th:with</h1>
+	<div th:with="first=${users[1]}">
+		<p>
+			<span th:text="${first.userName}"</span>
+		</p>
+	</div>
+</body>
+</html>

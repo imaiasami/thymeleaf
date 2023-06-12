@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바 스크립트 인라인</h1>
+	<script type="text/javascript">
+	var username = '[[${user.username}]]';
+	var age = [[${user.age}]];
+	var username2 = /* [[${user.username}]] */ 'test username';
+	var user = [[${user}]];
+	console.log(username);
+	console.log(age);
+	console.log(username2);
+</script>
+	<script type="text/javascript" th:inline="javascript">
+	var username = [[${user.username}]];
+	var age = [[${user.age}]];
+	/* 자바스크립트 내추럴 템플릿 */
+	var username2 = /* [[${user.username}]]*/ 'test username';
+	var user = [[${user}]];
+	console.log(username);
+	console.log(age);
+	console.log(username2);
+	
+	// 자바 스크립트 인라인 each
+	[# th:each="user : ${users}"]
+		var user[[${userStat.count}]] = [[${user}]]
+	[/]
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>주석</h1>
+	<span th:text="${data}"> HTML Data </span>
+	<h3>1. HTML 표준 주석</h3>
+	<!-- HTML 표준 주석 : 타임리프가 랜더링 하지 않고 그대로 남겨둔다. -->
+	<!-- <span th:text="${data}"> HTML Data </span>  -->
+	<h3>2. 타임리프 파서 주석</h3>
+	<!-- /* [{${data}}] */ -->
+	<!-- /*--><span th:text="${data}"> HTML Data </span>
+	<!-- /* -->
+	<h3>3. 타임리프 프로토타입 주석</h3>
+	<!-- 타임리프 프로토타입 주석 : 타임리프를 랜더링 한 경우에만 보인다. -->
+	<!-- /*/
+	<span th:text="${data}"> HTML Data </span>
+	/*/-->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>속성 설정</h1>
+	<input type="text" name="name" th:name="username">
+	<h1>속성 추가</h1>
+	th: attrappend : 속성 값의 뒤에 값을 추가
+	<input type="text" class="text" th:attrappend="class='large'">
+	<br> th: attrprepend : 속성 값의 앞에 값을 추가
+	<input type="text" class="text" th:attrprepend="class='large'">
+	<br> th: classappend : class 속성에 값을 추가
+	<input type="text" class="text" th:classappend="large">
+	<br>
+	<h1>checked 처리</h1>
+	th: checked = true
+	<input type="checkbox" th:checked="true">
+	<br> th: checked = false
+	<input type="checkbox" th:checked="false">
+	<br>
+</body>
+</html>
